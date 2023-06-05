@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('centres', function (Blueprint $table) {
             $table->uuid(column: 'id')->unique();
-            $table->string('comercia_name')->index();
-            $table->string('comercia_email')->index();
+            $table->string('comercial_name')->index();
+            $table->string('comercial_email')->index();
             $table->foreignId('contact_person')->nullable();
             $table->string('fiscal_name');
             $table->string('nif');
             $table->string('fiscal_email');
             $table->string('address');
-            $table->string('postal_code');
-            $table->string('city');
+            $table->string('lat')->nullable();
+            $table->string('lng')->nullable();
             $table->string('phone');
             $table->boolean('sepa');
             $table->string('payment_method'); // Payment_method: Transferencia, Recibo bancario

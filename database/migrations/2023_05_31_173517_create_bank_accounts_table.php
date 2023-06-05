@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid(column: 'id')->unique();
             $table->string('iban', 4);
             $table->string('bank', 4);
-            $table->string('branck', 4);
+            $table->string('branch', 4);
             $table->string('cd', 2);
             $table->string('number', 10);
             $table->string('holder', 25);
